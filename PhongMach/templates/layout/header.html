@@ -1,0 +1,162 @@
+<nav class="navbar navbar-expand-sm bg-success navb ar-dark" style="z-index:10;">
+    <form class="container">
+        <div class="container-fluid ">
+            <center>
+                <ul class="navbar-nav">
+                    <li class="nav-item nav-link ">
+                        <a href="#" aria-current="page"><img
+                                src="https://benhvien175.vn/wp-content/uploads/2018/08/icon-map.png"> 40/20B
+                    Tôn Ngộ Không,
+                    Phường Du Kí, Quận CAM</a>
+                    </li>
+                    <li class="dropdown nav-item nav-link thuVien-dropdow">
+                                <a class=" dropdown-toggle" href="#" aria-current="page"><img
+                                src="https://benhvien175.vn/wp-content/uploads/2018/08/icon-tim-kiem.png"> Thư viện</a>
+                                <ul class="dropdown-menu position-dropdow">
+                                    <li><a class="dropdown-item" href="#"><img
+                                    src="https://benhvien175.vn/wp-content/uploads/2018/09/icon-thuvien1.png"> Thư viện
+                                hình
+                                ảnh</a></li>
+                                    <li><a class="dropdown-item" href="#"><img
+                                    src="https://benhvien175.vn/wp-content/uploads/2018/09/icon-thuvien2.png"> Tạp chí y
+                                dược thực hành 175</a></li>
+                                </ul>
+                            </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img
+                                src="https://benhvien175.vn/wp-content/uploads/2018/08/icon-lien-he.png"> Liên hệ</a>
+                    </li>
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item" style="">
+                        <a class="nav-link" href="/login">
+                            <img
+                                src="{{ current_user.avatar }}" width="40" height="30" class="rounded-circle" name="{{ current_user.avatar }}">
+<!--                            {{ current_user.name }}-->
+                        </a>
+                    </li>
+                    <li class="nav-item" style="padding-right:20px;">
+                        <a class="nav-link" href="/logout"><img
+                                src="https://benhvien175.vn/wp-content/uploads/2018/08/icon-dang-nhap.png"> Đăng
+                            xuất</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item" style="padding-right:20px;">
+                        <a class="nav-link" href="/login"><img
+                                src="https://benhvien175.vn/wp-content/uploads/2018/08/icon-dang-nhap.png"> Đăng
+                            nhập</a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item "><a class="nav-link" lang="vi" hreflang="vi" href="#"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAATlBMVEX+AAD2AADvAQH/eXn+cXL9amr8YmL9Wlr8UlL7TkvoAAD8d0f6Pz/3ODf2Ly/0KSf6R0f6wTv60T31IBz6+jr4+Cv3QybzEhL4bizhAADgATv8AAAAW0lEQVR4AQXBgU3DQBRAMb+7jwKVUPefkQEQTYJqByBENpKUGoZslXoN5LPONH8G9WWZ7pGlOn6XZmaGRce1J/seei4dl+7dPWDqkk7+58e3+igdlySPcYbwBG+lPhCjrtt9EgAAAABJRU5ErkJggg=="
+                            alt="Tiếng Việt" width="16" height="11" style="width: 16px; height: 11px;"></a></li>
+                    <li class="nav-item " style="padding-right:10px;"><a class="nav-link" lang="en-US" hreflang="en-US"
+                                                                         href="#"><img
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAMAAABBPP0LAAAAt1BMVEWSmb66z+18msdig8La3u+tYX9IaLc7W7BagbmcUW+kqMr/q6n+//+hsNv/lIr/jIGMnNLJyOP9/fyQttT/wb3/////aWn+YWF5kNT0oqz0i4ueqtIZNJjhvt/8gn//WVr/6+rN1+o9RKZwgcMPJpX/VFT9UEn+RUX8Ozv2Ly+FGzdYZrfU1e/8LS/lQkG/mbVUX60AE231hHtcdMb0mp3qYFTFwNu3w9prcqSURGNDaaIUMX5FNW5wYt7AAAAAjklEQVR4AR3HNUJEMQCGwf+L8RR36ajR+1+CEuvRdd8kK9MNAiRQNgJmVDAt1yM6kSzYVJUsPNssAk5N7ZFKjVNFAY4co6TAOI+kyQm+LFUEBEKKzuWUNB7rSH/rSnvOulOGk+QlXTBqMIrfYX4tSe2nP3iRa/KNK7uTmWJ5a9+erZ3d+18od4ytiZdvZyuKWy8o3UpTVAAAAABJRU5ErkJggg=="
+                            alt="English" width="16" height="11" style="width: 16px; height: 11px;"></a></li>
+                    <form class="d-flex">
+                        <input class="me-2" style="border-radius:10px;" type="text" placeholder="Search">
+                        <button class="btn btn-primary" style="border-radius:10px;" type="button">Search</button>
+                    </form>
+                </ul>
+            </center>
+        </div>
+    </form>
+</nav>
+<div id="passageWrapper" class="container">
+    <strong>
+        <!-- Nhấn vào về trang chủ-->
+        <a href="/">
+            <center class="white-bg"><img class="white-bg img-auto" src="https://i.ibb.co/NjnvpFM/Shark.png" alt="Shark"
+                                          border="0"></center>
+        </a>
+
+        <center>
+            <div id="passage" class=" border-top-color">
+                <nav class="navbar navbar-expand-sm navbar-light white-bg ">
+                    <div class="container-fluid " style="text-indent: 20px;">
+                        <ul class="navbar-nav">
+                            <li class="nav-item nav-link">
+                                <a class="black-text" href="#" aria-current="page">TRANG CHỦ</a>
+                            </li>
+                            <li class="dropdown nav-item nav-link">
+                                <a class="black-text dropdown-toggle" href="#" aria-current="page">GIỚI THIỆU</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Về chúng tôi</a></li>
+                                    <li><a class="dropdown-item" href="#">Đội Ngũ Lãnh Đạo</a></li>
+                                    <li><a class="dropdown-item" href="#">Đội Ngũ Bác Sĩ</a></li>
+                                    <li><a class="dropdown-item" href="#">Khối Cơ Quan Hành Chính</a></li>
+                                    <li><a class="dropdown-item" href="#">Sơ Đồ Tổ Chức</a></li>
+                                    <li><a class="dropdown-item" href="#">Cơ Sở Vật Chất</a></li>
+                                    <li><a class="dropdown-item" href="#">Tại Sao Chọn Chúng Tôi</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item nav-link">
+                                <a class="black-text" href="#" aria-current="page">CHUYÊN KHOA</a>
+                            </li>
+                            <li class="dropdown nav-item nav-link">
+                                <a class="black-text dropdown-toggle" href="#" aria-current="page">DÀNH CHO NGƯỜI
+                                    BỆNH</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Thông Tin Bảo Hiểm Y Tế</a></li>
+                                    <li><a class="dropdown-item" href="#">Dịch Vụ Khám Chữa Bệnh</a></li>
+                                    <li><a class="dropdown-item" href="#">Thủ Tục Nhập Xuất Viện</a></li>
+                                    <li><a class="dropdown-item" href="#">Quy Trình Khám Bệnh</a></li>
+                                    <li><a class="dropdown-item" href="#">Các Câu Hỏi Thường Gặp</a></li>
+                                    <li><a class="dropdown-item" href="#">Dịch Vụ Dành Cho Thân Nhân</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown nav-item nav-link">
+                                <a class="black-text dropdown-toggle" href="#" aria-current="page">HOẠT ĐỘNG TRỌNG
+                                    TÂM</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Cấp Cứu Biển Đảo-Thiên Tai-Thảm Họa</a></li>
+                                    <li><a class="dropdown-item" href="#">Gìn Giữ Hòa Bình Liên Hiệp Quốc</a></li>
+                                    <li><a class="dropdown-item" href="#">Chỉ Đạo Tuyến</a></li>
+                                    <li><a class="dropdown-item" href="#">Huấn Luyện Đào Tạo</a></li>
+                                    <li><a class="dropdown-item" href="#">Nghiên Cứu Khoa Học</a></li>
+                                    <li><a class="dropdown-item" href="#">Hợp Tác Quốc Tế</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown nav-item nav-link">
+                                <a class="black-text dropdown-toggle" href="#" aria-current="page">TIN TỨC</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Bản Tin Shark</a></li>
+                                    <li><a class="dropdown-item" href="#">Tin Tuyển Dụng</a></li>
+                                    <li><a class="dropdown-item" href="#">Tin Khác</a></li>
+                                    <li><a class="dropdown-item" href="#">Tin Tức Nội Bộ</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown nav-item nav-link btn-group btn-group">
+                                <a class="black-text dropdown-toggle" data-bs-toggle="dropdown" href="#"
+                                   aria-current="page">THÔNG TIN
+                                    COVID-19</a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">Tra Cứu Tiêm Vắc Xin COVID-19</a></li>
+                                    <li><a class="dropdown-item" href="#">Những Điều Cần Biết Về Vắc Xin COVID-19</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Thông Tin COVID-19</a></li>
+                                    <li><a class="dropdown-item" href="#">Tài Liệu COVID-19</a></li>
+                                </ul>
+                            </li>
+                            <!--                            <div class="btn-group">-->
+                            <!--                                <a type="button" class=" black-text dropdown-toggle"-->
+                            <!--                                        data-bs-toggle="dropdown" >-->
+                            <!--                                    THÔNG TIN-->
+                            <!--                                </a>-->
+                            <!--                                <ul class="dropdown-menu dropdown-menu-end">-->
+                            <!--                                    <li><a class="dropdown-item" href="#">Tra Cứu Tiêm Vắc Xin COVID-19</a></li>-->
+                            <!--                                    <li><a class="dropdown-item" href="#">Những Điều Cần Biết Về Vắc Xin COVID-19</a>-->
+                            <!--                                    </li>-->
+                            <!--                                    <li><a class="dropdown-item" href="#">Thông Tin COVID-19</a></li>-->
+                            <!--                                    <li><a class="dropdown-item" href="#">Tài Liệu COVID-19</a></li>-->
+                            <!--                                </ul>-->
+                            <!--                            </div>-->
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </center>
+    </strong>
+    <!-- Indicator container -->
+
+</div>
