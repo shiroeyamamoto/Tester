@@ -1,3 +1,3 @@
 # Shark
  
-Của em như của bạn.
+Của chúng em như của các bạn.
