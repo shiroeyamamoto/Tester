@@ -1,3 +1,3 @@
 # Shark
  
-Của chúng em như của các bạn.
+Đọc kĩ file hướng dẫn khi kiểm thử.
