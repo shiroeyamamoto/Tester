@@ -218,7 +218,11 @@ if __name__ == '__main__':
     ###Làm theo hướng dẫn để tạo database
     ################################################### Chạy lệnh create_all ở hàng 220 ################################
     # db.create_all()
-    #Chạy xong nhớ đóng, vậy là có thể chạy được website rồi
+    #Chạy xong nhớ đóng lệnh haàng 220.
+
+    ##Cách lệnh bên dưới là các lệnh nạp dữ liệu, chỉ chạy các lệnh bên dưới sau khi đã tạo database ở hàng 220.
+    ## ---------------- LƯU Ý: Chạy lần lượt các lệnh bên dưới theo một đoạn được ngăn cách mới 2 dấu Enter. Nếu chạy một loạt sẽ phát sinh lỗi.
+    ## ---------------- Chạy xong đoạn nào nhớ đóng đoạn đó lại để dữ liệu không bị nạp lại vào lần thứ 2.
 
     # p1=UnitMedication(name_unit='Chai')
     # p2=UnitMedication(name_unit='Lo')
@@ -226,6 +230,7 @@ if __name__ == '__main__':
     # db.session.add(p1)
     # db.session.add(p2)
     # db.session.add(p3)
+
 
     # p4=[
     #     Medication(name='Amoxicillin', price=random.randint(50000,1000000),unitmedication_id=random.randint(1,3)),
@@ -261,17 +266,15 @@ if __name__ == '__main__':
     # ]
     # db.session.bulk_save_objects(p4)
 
+
     # ruleValue = {
     #     rule(id=1, name="Số lượng bệnh nhân", value=40),
     #     rule(id=2, name="Tiền khám bệnh", value=100000)
     # }
-
     # db.session.bulk_save_objects(ruleValue)  # Bang quy dinh
 
 
 
-    #
-    #
     db.session.commit()
 
 
